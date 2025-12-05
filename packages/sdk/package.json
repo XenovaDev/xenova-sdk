@@ -1,0 +1,14 @@
+{
+  "name": "@xenova/sdk",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@xenova/common": "workspace:*",
+    "@xenova/protocol": "workspace:*"
+  }
+}

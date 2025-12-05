@@ -1,0 +1,16 @@
+{
+  "name": "@xenova/engine",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@xenova/common": "workspace:*",
+    "@xenova/protocol": "workspace:*"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "xenova",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "bootstrap": "pnpm -w install",
+    "build": "pnpm -w -s run build",
+    "test": "pnpm -w -s run test",
+    "lint": "eslint . --ext .ts,.tsx",
+    "clean": "rimraf node_modules dist",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "pnpm": "^8.6.0",
+    "vitest": "^1.0.0",
+    "tsup": "^6.8.0",
+    "eslint": "^8.50.0",
+    "prettier": "^2.8.8",
+    "@types/node": "^20.0.0"
+  }
+}

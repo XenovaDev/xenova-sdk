@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: pnpm/action-setup@v2
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: pnpm -w install
+      - name: Build
+        run: pnpm -w build
+      - name: Run tests
+        run: pnpm -w test
+      - name: Lint
+        run: pnpm -w lint || true

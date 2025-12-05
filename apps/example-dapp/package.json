@@ -1,0 +1,12 @@
+{
+  "name": "example-dapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@xenova/sdk": "workspace:*"
+  }
+}
